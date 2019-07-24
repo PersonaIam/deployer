@@ -182,7 +182,7 @@ module.exports = class GenesisBlockBuilder {
             version: 0,
             totalAmount,
             totalFee,
-            reward: 0,
+            reward: "0",
             payloadHash: payloadHash.digest().toString('hex'),
             timestamp: data.timestamp,
             numberOfTransactions: transactions.length,

@@ -130,7 +130,7 @@ let networkConfig = {
 let milestones = [
   {
     height: 1,
-    reward: 0,
+    reward: "0",
     activeDelegates: options.forgers,
     blocktime: options.blocktime,
     block: {
