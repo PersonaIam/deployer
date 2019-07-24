@@ -123,7 +123,7 @@ module.exports = class GenesisBlockBuilder {
     __createDelegateTransaction(wallet) {
         const { data } =  Transactions.BuilderFactory
             .delegateRegistration()
-            .amount(Utils.BigNumber.ONE.toString())
+            .amount(Utils.BigNumber.ZERO.toString())
             .usernameAsset(wallet.username)
             .sign(wallet.passphrase)
 
