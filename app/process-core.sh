@@ -2,6 +2,7 @@
 
 process_core_start()
 {
+    BRIDGECHAIN_PATH="$HOME/core-bridgechain"
     process_core_stop "$@"
 
     heading "Starting..."

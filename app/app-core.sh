@@ -107,6 +107,16 @@ app_install_core()
 
     git clone https://github.com/ArkEcosystem/core.git --branch 2.3.22 "$BRIDGECHAIN_PATH"
 
+    echo "DONE CLONING"
+    cd "$BLOCKCHAIN_PATH"
+    sudo npm install joi
+    sudo npm install @arkecosystem/crypto@2.5.7
+    sudo npm install pino
+    sudo npm install pino-pretty
+    sudo npm install envfile
+    sudo npm install expand-home-dir
+    cd "$ROOT_PATH"
+
     local DYNAMIC_FEE_ENABLED="false"
     if [[ "$FEE_DYNAMIC_ENABLED" == "Y" ]]; then
         local DYNAMIC_FEE_ENABLED="true"
