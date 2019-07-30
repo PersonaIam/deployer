@@ -22,7 +22,7 @@
         "127.0.0.5",
         "127.0.0.6"
     ],
-    "mainnetPrefix": "M",
+    "mainnetPrefix": "P",
     "devnetPrefix": "D",
     "testnetPrefix": "T",
     "fees": {
@@ -74,11 +74,11 @@
     "blocktime": 8,
     "transactionsPerBlock": 50,
     "totalPremine": 2100000000000000,
-    "rewardHeightStart": 75600,
+    "rewardHeightStart": 2,
     "rewardPerBlock": 200000000,
     "vendorFieldLength": 255,
-    "bridgechainPath": "/home/personaminer/persona-core",
-    "explorerPath": "/home/personaminer/persona-explorer",
+    "bridgechainPath": "/home/remus/core-bridgechain",
+    "explorerPath": "/home/remus/core-bridgechain",
     "gitCoreCommit": false,
     "gitCoreOrigin": null,
     "gitExplorerCommit": false,

@@ -54,10 +54,11 @@ module.exports = class GenesisBlockBuilder {
         let passphrase = bip39.generateMnemonic();
         const root = Crypto.HDWallet.fromMnemonic(passphrase);
         const node = root.derivePath("44'/1'/0'/0/0");
-        const keys = Crypto.HDWallet.getKeys(node)
+        const keys = Identities.Keys.fromPassphrase(passphrase)
 
+        let address = Identities.Address.fromPublicKey(keys.publicKey, this.prefixHash);
         return {
-            address: Identities.Address.fromPublicKey(keys.publicKey, this.prefixHash),
+            address: address,
             passphrase,
             keys,
         }
@@ -142,7 +143,6 @@ module.exports = class GenesisBlockBuilder {
             timestamp: 0,
             senderId: wallet.address,
         })
-        console.log(JSON.stringify(transaction))
         transaction.signature = Transactions.Signer.sign(transaction, wallet.keys)
         transaction.id = Transactions.Utils.getId(transaction)
 

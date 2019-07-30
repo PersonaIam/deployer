@@ -105,7 +105,7 @@ app_install_core()
 
     rm -rf "$CONFIG_PATH_MAINNET" "$CONFIG_PATH_DEVNET" "$CONFIG_PATH_TESTNET" "$BRIDGECHAIN_PATH"
 
-    git clone https://github.com/PersonaIam/core.git --branch persona-2.4.14 "$BRIDGECHAIN_PATH"
+    git clone https://github.com/PersonaIam/core.git --branch master "$BRIDGECHAIN_PATH"
 
     echo "DONE CLONING"
     cd "$BLOCKCHAIN_PATH"
